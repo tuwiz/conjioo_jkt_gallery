@@ -400,6 +400,55 @@
               </div>
         </div>
     </div>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-dark mb-5">Booking Form</h1>
+                <form onsubmit="sendMessage()">
+                    <div class="mb-3">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" placeholder="Nama Anda" class="form-control shadow-none" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="check_in">check in</label>
+                        <input type="date" id="check_in" class="form-control shadow-none" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="check_out">check out</label>
+                        <input type="date" id="check_out" class="form-control shadow-none" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jml_kamar">Jumlah Kamar</label>
+                        <input type="number" id="jml_kamar" placeholder="Isi Jumlah Kamar" class="form-control shadow-none" required>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Email Address" class="form-control shadow-none" required>
+                    </div> -->
+                    <!-- <div class="mb-3">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" cols="30" rows="3" class="form-control shadow-none" required></textarea>
+                    </div> -->
+                    <button class="btn btn-primary px-4" type="submit"><i class="fa-brands fa-whatsapp"></i>&nbsp;Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const check_in = document.getElementById('check_in').value;
+            const check_out = document.getElementById('check_out').value;
+            const jml_kamar = document.getElementById('jml_kamar').value;
+            
+            const url = "https://api.whatsapp.com/send?phone=6281399379292&text=Booking%20Room%20Conjioo%20Hotel%20Jakarta%0ABooking%20Name%3A%20*"+ name +"*%0ATanggal%20Check%20In%3A%20*"+ check_in + "*%0ATanggal%20Check%20Out%3A%20*"+ check_out +"*%0AJumlah%20kamar%3A%20*"+ jml_kamar +"*";
+            window.open(url);
+            
+            // const url = "https://api.whatsapp.com/send?phone=6281399379292&text=Halo%20Admin%0ASaya%20*"+ name +"*%0AEmail%20Saya%20*"+ email +"*%0A%0A*"+ message +"*";
+            // window.open(url);
+        }
+    </script>
+    <!-- https://www.wasap.at/#google_vignette -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
