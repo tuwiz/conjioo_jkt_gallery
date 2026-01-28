@@ -472,7 +472,7 @@
 
     <script>
         function sendMessage() {
-            const name = document.getElementById('name').value;
+            const name = document.getElementById('name').value.trim().toUpperCase();
             const check_in = document.getElementById('check_in').value;
             const check_out = document.getElementById('check_out').value;
             const jml_kamar = document.getElementById('jml_kamar').value;
